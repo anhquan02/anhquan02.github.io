@@ -23,6 +23,7 @@ print_hi('Tom')
 {% endhighlight %}
 
 ## đây là heading 2
+![đây là hình ảnh](https://matamatamusik.com/wp-content/uploads/2020/05/Lisa-Blackpink-1024x680.jpg)
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
