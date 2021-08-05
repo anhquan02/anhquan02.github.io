@@ -16,7 +16,7 @@ Khá quen thuộc với các lập trình viên. Nếu bạn là một lập tr�
 
 # Tạo Website bằng JekyII:
 
-1. Tải và cài đặt Ruby+Devkit [Downloads rubyinstaller.org](rubyinstaller.org)
+1. Tải và cài đặt Ruby+Devkit [Downloads rubyinstaller.org](https://rubyinstaller.org/)
    
 2. Chạy ridk install đã cài đặt ở bước 1 sau hoàn thành, chọn cài đặt thứ 3
 
