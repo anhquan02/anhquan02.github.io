@@ -7,30 +7,32 @@ categories: jekyll update
 ## Đăng nhập ứng dụng, Website bằng tài khoản Google.
 Trong trường hợp khi truy cập 1 website hay ứng dụng ta thường thấy có chức năng đăng nhập mà không cần sử dụng tài khoản của ứng dụng, web đó.
 Ví dụ trên trang [codelearn](https://codelearn.io/)
-        ![](../img/login/1.png)
+
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/login/1.png)
+
 ## Tạo ứng dụng Google+ để đăng nhập với google
 Truy cập Google [Cloud Platform](https://console.cloud.google.com/project/_/apiui/apis/library) để tạo project.
-        ![](../img/login/2.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/login/2.png)
 Chọn Edit để thiết lập ProjectID
-        ![](../img/login/3.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/3.png)
 Điền đầy đủ thông tin và ấn Create
-        ![](../img/login/4.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/4.png)
 Sau khi tạo project xong kích hoạt Google+ API bằng cách:
 	Nhập Google+ API vào ô search
-    ![](../img/login/5.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/5.png)
     Enable Google+ API
-    ![](../img/login/6.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/6.png)
 Sau khi enable dịch vụ thực hiện các bước sau để lấy thông tin:
-    ![](../img/login/7.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/7.png)
     CONFIGURE CONSENT SCREEN:
-    ![](../img/login/8.png)
-    ![](../img/login/9.png)
-    ![](../img/login/10.png)
-    ![](../img/login/11.png)
-    ![](../img/login/12.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/8.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/9.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/10.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/11.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/12.png)
 	Tạo mới OAuth client ID
-    ![](../img/login/13.png)
-    ![](../img/login/14.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/13.png)
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs//img/login/14.png)
 
 	*ClientID và Client Secret sẽ dùng để cấu hình bên Java Application hoặc Java Web App.
 
