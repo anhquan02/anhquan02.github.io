@@ -299,8 +299,8 @@ Tạo file index.jsp và google.jsp như sau:
 	</head>
 	<body>
 		<a href="https://accounts.google.com/o/oauth2/auth?
-		scope=email&redirect_uri=http://localhost:8080/DemoLogin/login-google&
-		response_type=code&client_id=1037640272440-g2hglhg218loia2n6vgimv9cgshs8lq5.apps.googleusercontent.com
+		scope=email&redirect_uri=YOUR_REDIRECT_URI&
+		response_type=code&client_id=YOUR_GOOGLE_CLIENT_ID
 		&approval_prompt=force">Sign in with Google
 	</a>
 	</body>
@@ -322,6 +322,6 @@ Tạo file index.jsp và google.jsp như sau:
 	</body>
 	</html>
 
-Link tham khảo: Staring With API (oauth2api.blogspot.com)
+Link tham khảo: [Staring With API](oauth2api.blogspot.com)
 
 Chúc các bạn may mắn	
