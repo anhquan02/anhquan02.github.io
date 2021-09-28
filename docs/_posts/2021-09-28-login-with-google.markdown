@@ -93,56 +93,60 @@ Trong file pom.xml them dependency sau:
 			<artifactId>fluent-hc</artifactId>
 			<version>4.5.13</version>
 		</dependency>	
-	Tạo 1 file GoogleUtils.java
+
+Tạo 1 file GoogleUtils.java
+
 	import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.JsonFactory;
+	import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
+	import com.google.api.client.http.javanet.NetHttpTransport;
+	import com.google.api.client.json.JsonFactory;
 
-import java.io.IOException;
+	import java.io.IOException;
 
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.fluent.Form;
-import org.apache.http.client.fluent.Request;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
+	import org.apache.http.client.ClientProtocolException;
+	import org.apache.http.client.fluent.Form;
+	import org.apache.http.client.fluent.Request;
+	import com.google.gson.Gson;
+	import com.google.gson.JsonObject;
 
-import auth.GooglePoJo;
+	import auth.GooglePoJo;
 
-public class GoogleUtils {
-	private final static String GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID";
-	private final static String GOOGLE_CLIENT_SECRET = "YOUR_GOOGLE_CLIENT_SECRET"
-	private final static String GOOGLE_REDIRECT_URI = "http://localhost:8080/<project-name>/login-google";
-	private final static String GOOGLE_GRANT_TYPE = "authorization_code";
-	private final static String GOOGLE_LINK_GET_TOKEN = "https://accounts.google.com/o/oauth2/token";
-	private final static String GOOGLE_LINK_GET_USER_INFO = 		"https://www.googleapis.com/oauth2/v1/userinfo?access_token=";
+	public class GoogleUtils {
+		private final static String GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID";
+		private final static String GOOGLE_CLIENT_SECRET = "YOUR_GOOGLE_CLIENT_SECRET"
+		private final static String GOOGLE_REDIRECT_URI = "http://localhost:8080/<project-name>/login-google";
+		private final static String GOOGLE_GRANT_TYPE = "authorization_code";
+		private final static String GOOGLE_LINK_GET_TOKEN = "https://accounts.google.com/o/oauth2/token";
+		private final static String GOOGLE_LINK_GET_USER_INFO = 		"https://www.googleapis.com/oauth2/v1/userinfo?access_token=";
 
-	private GoogleUtils() {
+		private GoogleUtils() {
 
+		}
+
+		public static String getToken(final String code) throws ClientProtocolException,IOException  {
+			String response = Request.Post(GOOGLE_LINK_GET_TOKEN)
+					.bodyForm(Form.form().add("client_id", GOOGLE_CLIENT_ID)
+							.add("client_secret", GOOGLE_CLIENT_SECRET)
+							.add("redirect_uri", GOOGLE_REDIRECT_URI)
+							.add("code", code).add("grant_type", GOOGLE_GRANT_TYPE)
+							.build())
+					.execute().returnContent().asString();
+			JsonObject jobj = new Gson().fromJson(response, JsonObject.class);
+			String accessToken = jobj.get("access_token").toString().replaceAll("\"", "");
+			return accessToken;
+		}
+		public static GooglePoJo getUserInfo(final String accessToken) throws ClientProtocolException, 
+	IOException {
+			String link = GOOGLE_LINK_GET_USER_INFO + accessToken;
+			String response = Request.Get(link).execute().returnContent().asString();
+			GooglePoJo googlePojo = new Gson().fromJson(response, GooglePoJo.class);
+			System.out.println(googlePojo);
+			return googlePojo;
+		}
 	}
 
-	public static String getToken(final String code) throws ClientProtocolException,IOException  {
-		String response = Request.Post(GOOGLE_LINK_GET_TOKEN)
-				.bodyForm(Form.form().add("client_id", GOOGLE_CLIENT_ID)
-						.add("client_secret", GOOGLE_CLIENT_SECRET)
-						.add("redirect_uri", GOOGLE_REDIRECT_URI)
-						.add("code", code).add("grant_type", GOOGLE_GRANT_TYPE)
-						.build())
-				.execute().returnContent().asString();
-		 JsonObject jobj = new Gson().fromJson(response, JsonObject.class);
-	      String accessToken = jobj.get("access_token").toString().replaceAll("\"", "");
-	      return accessToken;
-	}
-	public static GooglePoJo getUserInfo(final String accessToken) throws ClientProtocolException, 
-IOException {
-	    String link = GOOGLE_LINK_GET_USER_INFO + accessToken;
-	    String response = Request.Get(link).execute().returnContent().asString();
-	    GooglePoJo googlePojo = new Gson().fromJson(response, GooglePoJo.class);
-	    System.out.println(googlePojo);
-	    return googlePojo;
-	  }
-}
-	Tạo 1 file GooglePoJo.java
+Tạo 1 file GooglePoJo.java
+
 	public class GooglePoJo {
 	 	private String id;
 	  	private String email;
@@ -217,102 +221,104 @@ IOException {
 		}
 }
 
-	Tạo 1 file Servlet
+Tạo 1 file Servlet
+
 	package controller;
+		
+	import java.io.IOException;
 
-import java.io.IOException;
+	import javax.servlet.RequestDispatcher;
+	import javax.servlet.ServletException;
+	import javax.servlet.annotation.WebServlet;
+	import javax.servlet.http.HttpServlet;
+	import javax.servlet.http.HttpServletRequest;
+	import javax.servlet.http.HttpServletResponse;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+	import org.apache.http.client.fluent.Request;
 
-import org.apache.http.client.fluent.Request;
-
-import auth.GooglePoJo;
-import utils.GoogleUtils;
-
-/**
- * Servlet implementation class LoginGoogleServlet
- */
-@WebServlet("/login-google")
-public class LoginGoogleServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginGoogleServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	import auth.GooglePoJo;
+	import utils.GoogleUtils;
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, 
-IOException {
-		// TODO Auto-generated method stub
-		String code = request.getParameter("code");
-		if (code == null || code.isEmpty()) {
-		      RequestDispatcher dis = request.getRequestDispatcher("/views/index.jsp");
-		      dis.forward(request, response);
-		    } else {
-		      String accessToken = GoogleUtils.getToken(code);
-		      GooglePoJo googlePojo = GoogleUtils.getUserInfo(accessToken);
-		      request.setAttribute("pojo", googlePojo);
-		      RequestDispatcher dis = request.getRequestDispatcher("/views/google.jsp");
-		      dis.forward(request, response);
-		    }
+	* Servlet implementation class LoginGoogleServlet
+	*/
+	@WebServlet("/login-google")
+	public class LoginGoogleServlet extends HttpServlet {
+		private static final long serialVersionUID = 1L;
+		
+		/**
+		* @see HttpServlet#HttpServlet()
+		*/
+		public LoginGoogleServlet() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		/**
+		* @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+		*/
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, 
+	IOException {
+			// TODO Auto-generated method stub
+			String code = request.getParameter("code");
+			if (code == null || code.isEmpty()) {
+				RequestDispatcher dis = request.getRequestDispatcher("/views/index.jsp");
+				dis.forward(request, response);
+				} else {
+				String accessToken = GoogleUtils.getToken(code);
+				GooglePoJo googlePojo = GoogleUtils.getUserInfo(accessToken);
+				request.setAttribute("pojo", googlePojo);
+				RequestDispatcher dis = request.getRequestDispatcher("/views/google.jsp");
+				dis.forward(request, response);
+				}
+		}
+
+		/**
+		* @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+		*/
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, 
+	IOException {
+			// TODO Auto-generated method stub
+			doGet(request, response);
+		}
+
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, 
-IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
-}
-
-	Tạo file index.jsp và google.jsp như sau:
+Tạo file index.jsp và google.jsp như sau:
 	-index.jsp
+
 	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<a href="https://accounts.google.com/o/oauth2/auth?
-	scope=email&redirect_uri=http://localhost:8080/DemoLogin/login-google&
-	response_type=code&client_id=1037640272440-g2hglhg218loia2n6vgimv9cgshs8lq5.apps.googleusercontent.com
-	&approval_prompt=force">Sign in with Google
-</a>
-</body>
-</html>
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<a href="https://accounts.google.com/o/oauth2/auth?
+		scope=email&redirect_uri=http://localhost:8080/DemoLogin/login-google&
+		response_type=code&client_id=1037640272440-g2hglhg218loia2n6vgimv9cgshs8lq5.apps.googleusercontent.com
+		&approval_prompt=force">Sign in with Google
+	</a>
+	</body>
+	</html>
 -google.jsp
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<h1>${pojo.id }</h1>
-	<h1>${pojo.email }</h1>
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
+		pageEncoding="UTF-8"%>
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>${pojo.id }</h1>
+		<h1>${pojo.email }</h1>
 
-</body>
-</html>
+	</body>
+	</html>
 
 Link tham khảo: Staring With API (oauth2api.blogspot.com)
 
