@@ -322,6 +322,6 @@ Tạo file index.jsp và google.jsp như sau:
 	</body>
 	</html>
 
-Link tham khảo: [Staring With API](oauth2api.blogspot.com)
+Link tham khảo: [Staring With API](https://oauth2api.blogspot.com/)
 
 Chúc các bạn may mắn	
