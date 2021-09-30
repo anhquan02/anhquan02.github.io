@@ -24,35 +24,33 @@ Các thành phần:
 
 * Điểm bắt đầu( Start node): Thể hiện cho 1 việc bắt  đầu luồng chạy. Trong activity diagram chỉ được phép có 1 Start node duy nhất. Trước Start node không được xuất hiện bất kì một node nào.
 
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/1.png)  
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/1.png)  
 
 * Điểm kết thúc(End node): Thể hiện cho việc kết thúc luồng chạy . Trong 1 actitvy diagram chỉ có 1 End node. Sau End node sẽ không được xuất hiện bất kì một node nào.
 
-`			`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/2.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/2.png)
 
 * Action node: Đại diện cho 1 thao tác cần thực hiện.
 
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/3.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/3.png)
 
 * Object node: Đại diện cho 1 đối tượng trong luồn xử lý.
 
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/4.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/4.png)
 
 * Control flow: Thể hiện cho luồng chạy của Activity.
 
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/5.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/5.png)
 
 * Decision node: Thể hiện cho điều kiện, rẽ nhánh. Đảm bảo luồng hoạt động theo 1 nhánh duy nhất.
-
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/6.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/6.png)
 
 \*Merge node: Chiều ngược lại của Decision node. Gộp các nhánh con của Decision node thành 1 luồng duy nhất.
-
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/7.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/7.png)
 
 \*Fork node: Tách luồng xử lý thành nhiều nhánh con chạy song song. Thể hiện cho việc đồng thời xảy ra.
 
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/8.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/8.png)
 
 \*Join node: Chiều ngược lại của Fork node. Sau khi hành động song song kết thúc, gom các luồng xử lí về 1 luồng chính.
 
@@ -60,7 +58,7 @@ Các thành phần:
 
 \*Swimlane: Phân làn trong biểu đồ sử dụng. Phần kí hiệu này thường được sử dụng để làm rõ luồng hoạt động của các đối tượng riêng biệt.
 
-`		`![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/10.png)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/10.png)
 
 
 
@@ -74,7 +72,7 @@ Xem xét bản vẽ Use Case  để xác định nghiệp vụ nào bạn cần 
 
 **Bước 3: Xác định các hoạt động tiếp theo**
 
-`	`Xuất phát từ điểm bắt đầu, phân tích để xác định các hoạt động tiếp theo cho đến khi gặp điểm kết thúc để hoàn tất bản vẽ này.
+Xuất phát từ điểm bắt đầu, phân tích để xác định các hoạt động tiếp theo cho đến khi gặp điểm kết thúc để hoàn tất bản vẽ này.
 
 Ví dụ:
 
