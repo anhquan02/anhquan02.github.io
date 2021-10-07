@@ -42,9 +42,11 @@ Các thành phần:
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/5.png)
 
 * Decision node: Thể hiện cho điều kiện, rẽ nhánh. Đảm bảo luồng hoạt động theo 1 nhánh duy nhất.
+* 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/6.png)
 
 \*Merge node: Chiều ngược lại của Decision node. Gộp các nhánh con của Decision node thành 1 luồng duy nhất.
+
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/7.png)
 
 \*Fork node: Tách luồng xử lý thành nhiều nhánh con chạy song song. Thể hiện cho việc đồng thời xảy ra.
