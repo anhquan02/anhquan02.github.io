@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Tạo website đăng nhập bằng google"
+title:  "Đăng nhập ứng dụng, Website bằng tài khoản Google."
 date:   2021-09-28 15:48:33 +0700
 categories: jekyll update
 ---
-## Đăng nhập ứng dụng, Website bằng tài khoản Google.
+## Giới thiệu
 Trong trường hợp khi truy cập 1 website hay ứng dụng ta thường thấy có chức năng đăng nhập mà không cần sử dụng tài khoản của ứng dụng, web đó.
 Ví dụ trên trang [codelearn](https://codelearn.io/)
 
