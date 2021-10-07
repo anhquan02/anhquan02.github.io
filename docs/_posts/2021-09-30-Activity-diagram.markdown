@@ -75,26 +75,46 @@ Xem xét bản vẽ Use Case  để xác định nghiệp vụ nào bạn cần 
 
 Xuất phát từ điểm bắt đầu, phân tích để xác định các hoạt động tiếp theo cho đến khi gặp điểm kết thúc để hoàn tất bản vẽ này.
 
-Ví dụ 1:
-
-![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/11.png)
-
-Dựa vào sơ đồ trên, ta phân tích như sau:
+Ví dụ 1:Sơ đồ đổi mật khẩu đơn giản ta phân tích như sau:
 * Bước 1: Người dùng chọn chức năng đổi mật khẩu.
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/1.png)
 * Bước 2: Hệ thống sẽ hiển thị form đổi mật khẩu cho người nhập dữ liệu.
-* Bước 3: Người dùng điền đầy đủ thông tin có thể chọn xác nhận hoặc huỷ( kết thúc). Nếu xác nhận thì tiếp bước 4.
-* Bước 4: Hệ thống kiểm tra các thông tin về mật khẩu bảo mật, mật khẩu xác nhận có trùng khớp không. Nếu trùng tiếp đến bước 5 còn không hệ thống sẽ quay lại bước 2.
-* Bước 5: Hệ thống sẽ thay đổi thông tin của người dùng.
-* Bước 6: Thông báo thay đổi cho người dùng rồi kết thúc.
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/2.png)
+* Bước 3: Người dùng nhập đầy đủ thông tin
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/3.png)
+* Bước 4: Người dùng có thể chọn xác nhận hoặc huỷ( kết thúc)
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/4.png)
+    - Nếu người dùng chọn xác nhận hệ thống sẽ kiểm tra thông tin mật khẩu mới và xác nhận mật khẩu có trùng khớp và hợp lệ
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/5.png)
+        -Nếu sai sẽ thông báo lỗi
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/6.png)
+            Tiếp sẽ chuyển về hiển thị form
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/7.png)
+        -Nếu đúng sẽ thay đổi mật khẩu người dùng
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/8.png)
+            Thông báo thay đổi thành công
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/9.png)
+            Chuyển đến merge node rồi kết thúc
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/10.png)
+    -Nếu người dùng chọn huỷ sẽ chuyển đến merge node rồi kết thúc
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/11.png)
 
-Ví dụ 2:
-
-![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/12.png)
-
-Sơ đồ trên mô tả quá trình của hoạt động hệ thống đăng nhập đơn giản:
+Ví dụ 2:Sơ đồ mô tả quá trình của hoạt động hệ thống đăng nhập đơn giản:
 * Bắt đầu người dùng sẽ phải nhập tài khoản, mật khẩu.
-* Hệ thống sẽ kiểm tra tài khoản có tồn tại không nếu không thì thông báo và yêu cầu đăng nhập lại.
-* Nếu tài khoản tồn tại trong hệ thống, hệ thống sẽ tiếp tục kiểm tra mật khẩu có trùng khớp với cơ sở dữ liệu không nếu không thì thông báo và yêu cầu đăng nhập lại.
-* Nếu mật khẩu trùng khớp sẽ thông báo đăng nhập thành công rồi kết thúc.
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/1.png)
+* Hệ thống sẽ kiểm tra tài khoản có tồn tại không.
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/2.png)
+    - Nếu không tồn tại thông báo sai tên đăng nhập
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/3.png)
+        Rồi quay lại yêu cầu người dùng đăng nhập
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/4.png)
+    -Nếu tồn tại hệ thống sẽ kiểm tra mật khẩu có trùng khớp với dữ liệu trong database không
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/5.png)
+        - Nếu không khớp sẽ thông báo sai mật khẩu
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/6.png)
+            Rồi quay lại yêu cầu người dùng đăng nhập
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/7.png)
+        - Nếu khớp thông báo đăng nhập thành công rồi kết thúc
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/9.png)
 
 Link tham khảo: [What is Activity Diagram? (visual-paradigm.com)](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
