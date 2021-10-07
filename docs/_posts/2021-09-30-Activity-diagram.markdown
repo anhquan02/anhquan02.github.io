@@ -94,14 +94,22 @@ Ví dụ 1:Sơ đồ đổi mật khẩu đơn giản ta phân tích như sau:
 - Nếu người dùng chọn xác nhận hệ thống sẽ kiểm tra thông tin mật khẩu mới và xác nhận mật khẩu có trùng khớp và hợp lệ
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/5.png)
     - Nếu sai sẽ thông báo lỗi
-        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/6.png)     
+
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/6.png)  
+
         Tiếp sẽ chuyển về hiển thị form
-        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/7.png)  
+
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/7.png)
+
     - Nếu đúng sẽ thay đổi mật khẩu người dùng        
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/8.png)            
+
         Thông báo thay đổi thành công            
+
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/9.png)            
-        Chuyển đến merge node rồi kết thúc            
+
+        Chuyển đến merge node rồi kết thúc   
+                 
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/10.png)         
 - Nếu người dùng chọn huỷ sẽ chuyển đến merge node rồi kết thúc. 
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/11.png)
