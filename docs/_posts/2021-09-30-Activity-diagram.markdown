@@ -42,7 +42,7 @@ Các thành phần:
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/5.png)
 
 * Decision node: Thể hiện cho điều kiện, rẽ nhánh. Đảm bảo luồng hoạt động theo 1 nhánh duy nhất.
-* 
+
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/6.png)
 
 \*Merge node: Chiều ngược lại của Decision node. Gộp các nhánh con của Decision node thành 1 luồng duy nhất.
@@ -81,15 +81,15 @@ Ví dụ 1:Sơ đồ đổi mật khẩu đơn giản ta phân tích như sau:
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/1.png)
 
 * Bước 2: Hệ thống sẽ hiển thị form đổi mật khẩu cho người nhập dữ liệu.
-* 
+
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/2.png)
 
 * Bước 3: Người dùng nhập đầy đủ thông tin
-* 
+
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/3.png)
 
 * Bước 4: Người dùng có thể chọn xác nhận hoặc huỷ( kết thúc)
-* 
+
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/4.png)
     - Nếu người dùng chọn xác nhận hệ thống sẽ kiểm tra thông tin mật khẩu mới và xác nhận mật khẩu có trùng khớp và hợp lệ
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/5.png)
