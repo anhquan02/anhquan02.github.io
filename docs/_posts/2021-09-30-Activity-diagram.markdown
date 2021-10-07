@@ -78,4 +78,12 @@ Ví dụ:
 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/11.png)
 
+Dựa vào sơ đồ trên, ta phân tích như sau:
+* Bước 1: Người dùng chọn chức năng đổi mật khẩu.
+* Bước 2: Hệ thống sẽ hiển thị form đổi mật khẩu cho người nhập dữ liệu.
+* Bước 3: Người dùng điền đầy đủ thông tin có thể chọn xác nhận hoặc huỷ( kết thúc). Nếu xác nhận thì tiếp bước 4.
+* Bước 4: Hệ thống kiểm tra các thông tin về mật khẩu bảo mật, mật khẩu xác nhận có trùng khớp không. Nếu trùng tiếp đến bước 5 còn không hệ thống sẽ quay lại bước 2.
+* Bước 5: Hệ thống sẽ thay đổi thông tin của người dùng.
+* Bước 6: Thông báo thay đổi cho người dùng rồi kết thúc.
+
 Link tham khảo: [What is Activity Diagram? (visual-paradigm.com)](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
