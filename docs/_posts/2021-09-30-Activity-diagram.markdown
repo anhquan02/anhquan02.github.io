@@ -93,17 +93,29 @@ Ví dụ 1:Sơ đồ đổi mật khẩu đơn giản ta phân tích như sau:
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/4.png)
     - Nếu người dùng chọn xác nhận hệ thống sẽ kiểm tra thông tin mật khẩu mới và xác nhận mật khẩu có trùng khớp và hợp lệ
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/5.png)
+        
         -Nếu sai sẽ thông báo lỗi
-            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/6.png)            
+        
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/6.png)     
+            
             Tiếp sẽ chuyển về hiển thị form
-            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/7.png)           
+            
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/7.png)  
+            
         -Nếu đúng sẽ thay đổi mật khẩu người dùng
+        
             ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/8.png)
+            
             Thông báo thay đổi thành công
+            
             ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/9.png)
+            
             Chuyển đến merge node rồi kết thúc
-            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/10.png)            
+            
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/10.png)   
+            
     -Nếu người dùng chọn huỷ sẽ chuyển đến merge node rồi kết thúc
+    
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu1/11.png)
 
 Ví dụ 2:Sơ đồ mô tả quá trình của hoạt động hệ thống đăng nhập đơn giản:
@@ -114,17 +126,29 @@ Ví dụ 2:Sơ đồ mô tả quá trình của hoạt động hệ thống đă
 * Hệ thống sẽ kiểm tra tài khoản có tồn tại không.
 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/2.png)
+
     - Nếu không tồn tại thông báo sai tên đăng nhập    
-        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/3.png)        
+    
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/3.png) 
+        
         Rồi quay lại yêu cầu người dùng đăng nhập        
-        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/4.png)        
+        
+        ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/4.png)   
+        
     -Nếu tồn tại hệ thống sẽ kiểm tra mật khẩu có trùng khớp với dữ liệu trong database không    
-    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/5.png)    
+    
+    ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/5.png)   
+    
         - Nếu không khớp sẽ thông báo sai mật khẩu        
-            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/6.png)            
+        
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/6.png) 
+            
             Rồi quay lại yêu cầu người dùng đăng nhập            
-            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/7.png)            
+            
+            ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/7.png)   
+            
         - Nếu khớp thông báo đăng nhập thành công rồi kết thúc        
+        
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/vidu2/9.png)
 
 Link tham khảo: [What is Activity Diagram? (visual-paradigm.com)](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
