@@ -75,7 +75,7 @@ Xem xét bản vẽ Use Case  để xác định nghiệp vụ nào bạn cần 
 
 Xuất phát từ điểm bắt đầu, phân tích để xác định các hoạt động tiếp theo cho đến khi gặp điểm kết thúc để hoàn tất bản vẽ này.
 
-Ví dụ:
+Ví dụ 1:
 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/11.png)
 
@@ -86,5 +86,15 @@ Dựa vào sơ đồ trên, ta phân tích như sau:
 * Bước 4: Hệ thống kiểm tra các thông tin về mật khẩu bảo mật, mật khẩu xác nhận có trùng khớp không. Nếu trùng tiếp đến bước 5 còn không hệ thống sẽ quay lại bước 2.
 * Bước 5: Hệ thống sẽ thay đổi thông tin của người dùng.
 * Bước 6: Thông báo thay đổi cho người dùng rồi kết thúc.
+
+Ví dụ 2:
+
+![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/Activity/12.png)
+
+Sơ đồ trên mô tả quá trình của hoạt động hệ thống đăng nhập đơn giản:
+* Bắt đầu người dùng sẽ phải nhập tài khoản, mật khẩu.
+* Hệ thống sẽ kiểm tra tài khoản có tồn tại không nếu không thì thông báo và yêu cầu đăng nhập lại.
+* Nếu tài khoản tồn tại trong hệ thống, hệ thống sẽ tiếp tục kiểm tra mật khẩu có trùng khớp với cơ sở dữ liệu không nếu không thì thông báo và yêu cầu đăng nhập lại.
+* Nếu mật khẩu trùng khớp sẽ thông báo đăng nhập thành công rồi kết thúc.
 
 Link tham khảo: [What is Activity Diagram? (visual-paradigm.com)](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
