@@ -16,16 +16,16 @@ categories: jekyll update
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/1.png)
   - Chọn server:\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/2.png)
-  - Chọn phiên bản tomcat( khác v10.0 vì nó đang lỗi) --> Next.\    
+  - Chọn phiên bản tomcat( khác v10.0 vì nó đang lỗi) --> Next.
   - Chọn tải và cài đặt --> chọn thư mục mà bạn muốn lưu file tomcat sẽ tải.\
 ( nếu như bạn đã tải tomcat trên Apache Tomcat® - Welcome! thì browser đến thư mục đã giải nén)\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/3.png)
   - Finsh bạn sẽ có 1 foder như sau là thành công:\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/4.png)
-- Chọn trình duyệt mặc định khi chạy server:\
+- Chọn trình duyệt mặc định khi chạy server:
   - Window --> Web browser --> Tùy chọn( trừ 0 Internal Web Browser bởi nó sau làm việc với nó dễ bị vỡ form)\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/5.png)
-- Tạo project ( project mình sẽ dùng tomcat v9 mọi người có thể tham khảo):\
+- Tạo project ( project mình sẽ dùng tomcat v9 mọi người có thể tham khảo):
   - File --> New --> Other --> Dynamic Web.\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/6.png)
   - Đặt tên project( tùy ý đặt tên nhé!) --> Finish.\
@@ -41,7 +41,7 @@ categories: jekyll update
       Sau khi Finish sẽ xuất hiện 1 trang web như sau:\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/12.png)
     
-      Lên được đến đây thì mọi thứ vẫn bình thường.\
+      Lên được đến đây thì mọi thứ vẫn bình thường.
   - Tạo folder views cho project. Project sẽ theo mô hình MVC.\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/13.png)
   - Tạo file .jsp trong views mình sẽ đặt là index.jsp cho quen thuộc với index.html\
