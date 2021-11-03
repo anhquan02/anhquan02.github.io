@@ -9,6 +9,7 @@ categories: jekyll update
 ## Yêu cầu cài đặt:
 * Eclipse.
 * Apache tomcat( hiện tomcat v10.0 đang lỗi ko khuyến khích dùng).
+
 ## Hello-world demo:
 
 - Tạo 1 server tomcat trên IDE eclipse: 
