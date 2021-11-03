@@ -37,9 +37,9 @@ categories: jekyll update
   - Có thể chạy luôn để kiểm tra mọi thứ có hoạt động bình thường không:\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/10.png)
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/11.png)
-    \Sau khi Finish sẽ xuất hiện 1 trang web như sau:\
+      Sau khi Finish sẽ xuất hiện 1 trang web như sau:\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/12.png)
-    \Lên được đến đây thì mọi thứ vẫn bình thường.\
+      Lên được đến đây thì mọi thứ vẫn bình thường.\
   - Tạo folder views cho project. Project sẽ theo mô hình MVC.\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/servlet-demo/13.png)
   - Tạo file .jsp trong views mình sẽ đặt là index.jsp cho quen thuộc với index.html\
