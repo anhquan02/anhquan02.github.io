@@ -19,7 +19,7 @@ categories: jekyll update
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/5.png)
 
 2. Tạo Servlet.\
-- Các bạn có thể tham khảo [tại đây](https://anhquan02.github.io/jekyll/update/2021/11/03/Hello-world-servlet.html).\
+- Các bạn có thể tham khảo [tại đây](https://anhquan02.github.io/jekyll/update/2021/11/03/Hello-world-servlet.html).
 - Tạo thư mục theo cấu trúc MVC:
 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/6.png)
@@ -29,7 +29,7 @@ Tại folder META-INF bạn hay copy file persistence.xml đã cấu hình theo 
 ( nếu các bạn deploy project JPA thì làm bước này)\
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/7.png)
 
-- Config file pom.xml:\
+- Config file pom.xml:
   - Phần build:
 
             <plugins>
@@ -60,7 +60,7 @@ Tại folder META-INF bạn hay copy file persistence.xml đã cấu hình theo 
             </plugin>
             </plugins>  
 
-  - Phần Dependences sẽ phụ thuộc vào project của các bạn nó sẽ được cài đặt tại 1 vài mục sau( đây là 1 vài dependences của mình).\
+  - Phần Dependences sẽ phụ thuộc vào project của các bạn nó sẽ được cài đặt tại 1 vài mục sau( đây là 1 vài dependences của mình).
 
             <dependency>
             <groupId>javax.servlet</groupId>
@@ -92,8 +92,8 @@ Tại folder META-INF bạn hay copy file persistence.xml đã cấu hình theo 
 
 Tạo thêm thưc mục .docker và các file như hình( Chi tiết file mình sẽ để [ở đây](https://github.com/anhquan02/hello-world) ):
 
-1. Deploy.\
-- Yêu cầu: \
+3. Deploy.
+- Yêu cầu: 
   - Cài đặt docker.
   - Cài đặt docker-compose.
 
