@@ -19,8 +19,8 @@ categories: jekyll update
         ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/5.png)
 
 2. Tạo Servlet.\
-- Các bạn có thể tham khảo tại đây Java web demo | My Blog (anhquan02.github.io).\
-- Tạo thư mục theo cấu trúc MVC:\
+- Các bạn có thể tham khảo [tại đây](https://anhquan02.github.io/jekyll/update/2021/11/03/Hello-world-servlet.html).\
+- Tạo thư mục theo cấu trúc MVC:
 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/6.png)
 
@@ -30,7 +30,7 @@ Tại folder META-INF bạn hay copy file persistence.xml đã cấu hình theo 
 ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/7.png)
 
 - Config file pom.xml:\
-  - Phần build:    \
+  - Phần build:
 
             <plugins>
             <plugin>            
@@ -90,22 +90,22 @@ Tại folder META-INF bạn hay copy file persistence.xml đã cấu hình theo 
             </dependency>
 
 
-Tạo thêm thưc mục .docker và các file như hình( Chi tiết file mình sẽ để [ở đây](https://anhquan02.github.io/jekyll/update/2021/11/03/Hello-world-servlet.html) ):\
+Tạo thêm thưc mục .docker và các file như hình( Chi tiết file mình sẽ để [ở đây](https://github.com/anhquan02/hello-world) ):
 
 1. Deploy.\
 - Yêu cầu: \
-  - Cài đặt docker.\
-  - Cài đặt docker-compose.\
+  - Cài đặt docker.
+  - Cài đặt docker-compose.
 
-- Mở terminal visual studio code( hoặc sử dụng terminal ubuntu trỏ đến project):\
+- Mở terminal visual studio code( hoặc sử dụng terminal ubuntu trỏ đến project):
 
   - Sử dụng lệnh ‘docker-compose up’.\
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/8.png)
     ![](https://raw.githubusercontent.com/anhquan02/anhquan02.github.io/anhquan02/docs/img/demo-deploy/9.png)
-  - Mở thêm 1 terminal nữa, dùng lệnh ‘docker exec -it  helloworld_webapp_1 /bin/bash’.\
-  - Dùng lệnh ‘cd var/www/app/’.\
-  - Dùng lệnh ‘mvn clean'.\
-  - Dùng lệnh ‘mvn tomcat7:deploy -e’.\
-  - Truy cập http://127.0.0.1:8080/HelloServlet/HelloServlet để kiểm tra.\
+  - Mở thêm 1 terminal nữa, dùng lệnh ‘docker exec -it  helloworld_webapp_1 /bin/bash’.
+  - Dùng lệnh ‘cd var/www/app/’.
+  - Dùng lệnh ‘mvn clean'.
+  - Dùng lệnh ‘mvn tomcat7:deploy -e’.
+  - Truy cập http://127.0.0.1:8080/HelloServlet/HelloServlet để kiểm tra.
 
 ### Chúc bạn thành công
